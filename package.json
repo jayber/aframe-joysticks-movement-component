@@ -8,6 +8,10 @@
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jayber/aframe-joysticks-movement-component"
+  },
   "keywords": [
     "a-frame",
     "aframe",
