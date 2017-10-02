@@ -1,6 +1,6 @@
 {
   "name": "aframe-joysticks-movement-component",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A-Frame component to add movement for gamepads and VR controllers based on left and right joysticks, tracking hmd for direction.",
   "main": "./src/index.js",
   "scripts": {
