@@ -1,0 +1,30 @@
+{
+  "name": "aframe-joysticks-movement-component",
+  "version": "0.1.0",
+  "description": "A-Frame component to add movement for gamepads and VR controllers based on left and right joysticks",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --progress --colors",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "a-frame",
+    "aframe",
+    "WebVR",
+    "Oculus-Touch",
+    "Vive-Controller",
+    "Gamepad"
+  ],
+  "dependencies": {
+    "three": "^0.87.1"
+  },
+  "devDependencies": {
+    "aframe": "*",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "webpack": "^3.5.5"
+  },
+  "author": "James Bromley <james.a.bromley@gmail.com> (http://www.vrlobby.co)",
+  "license": "ISC"
+}
