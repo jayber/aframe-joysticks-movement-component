@@ -1,5 +1,5 @@
 /*I copied this from
-* https://github.com/mrdoob/three.js/blob/87cd4caca11544c0914d3828b299c8939bc981b2/examples/js/controls/VRControls.js
+* https://github.com/mrdoob/three.js/blob/dev/examples/js/controls/VRControls.js
 * */
 export default function (object, onError) {
   var scope = this;
