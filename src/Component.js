@@ -45,7 +45,7 @@ AFRAME.registerComponent('joysticks-movement', {
       // Rotation
       this.pitch = new THREE.Object3D();
       this.yaw = new THREE.Object3D();
-      this.yaw.position.y = 10;
+      this.yaw.position.y = 0;
       this.yaw.add(this.pitch);
 
     },
@@ -197,6 +197,7 @@ AFRAME.registerComponent('joysticks-movement', {
 
         prevInitialRotation.copy(initialRotation);
 
+
         // If external controls have been active in last 500ms, wait.
         if (tCurrent - tLastExternalActivity < DEBOUNCE) {
           return;
@@ -212,10 +213,11 @@ AFRAME.registerComponent('joysticks-movement', {
         if (tLastExternalActivity > tLastLocalActivity && !lookVector.lengthSq()) {
           return;
         }
-
+        this.yaw.rotation.y = this.el.object3D.rotation.y;
         var sensitivity = this.data.sensitivity;
         var checkType = this.checkControllerType();
         if ( checkType && checkType.type != this.types.GAMEPAD ) {
+          //this bit means that the joystick must be set back to 0 before being applied again, i.e. quantized
           var act = !this.lastAction;
           if (!lookVector.lengthSq()) {
             this.lastAction = false;
